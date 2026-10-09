@@ -1,0 +1,748 @@
+{
+  "personal": {
+    "name": "Zahid Marwat",
+    "brandName": "zahid-marwat",
+    "title": "Senior Computer Vision Engineer & AI Specialist",
+    "email": "fbpzahid4830@gmail.com",
+    "phone": "+92 300 0000000",
+    "location": "Islamabad, Pakistan",
+    "bio": "Passionate Senior Computer Vision Engineer and AI/ML Specialist with expertise in deep learning, real-time object detection, image segmentation, and AI model deployment. Currently pursuing MS in Information Security at NUST after graduating from GIKI. Leading AI projects at Airloop.",
+    "image": "/assets/profile-picture.png",
+    "whatsapp": "923000000000",
+    "whatsappMessage": "Hi Zahid, I found your portfolio and want to talk about Computer Vision and AI projects.",
+    "tagline": "Building innovative AI solutions and real-time computer vision systems that solve real-world problems.",
+    "resumeUrl": "/assets/Zahid_Marwat_CV.pdf",
+    "stack": [
+      "Computer Vision",
+      "PyTorch",
+      "TensorFlow",
+      "YOLO",
+      "OpenCV",
+      "FastAPI",
+      "Docker",
+      "React",
+      "Electron"
+    ]
+  },
+  "social": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/zahid-marwat",
+      "icon": "github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/zahid4830513",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/zahid89782667",
+      "icon": "twitter"
+    },
+    {
+      "platform": "Email",
+      "url": "mailto:fbpzahid4830@gmail.com",
+      "icon": "email"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Airloop",
+      "position": "Senior Computer Vision Engineer",
+      "employmentType": "Full-time (Remote)",
+      "location": "Islamabad, Pakistan",
+      "startDate": "2022",
+      "endDate": "Present",
+      "responsibilities": [
+        "Lead end-to-end computer vision projects and deep learning AI model development",
+        "Developed real-time object detection and segmentation systems achieving over 95% accuracy",
+        "Led a team of 5 engineers in designing scalable computer vision solutions for industry applications",
+        "Optimized deep learning model inference speed by 40% using TensorRT, ONNX Runtime, and C++ bindings",
+        "Implemented automated MLOps pipelines reducing deployment cycle times by 60%",
+        "Successfully delivered 15+ production AI/CV projects across smart infrastructure, surveillance, and defect detection"
+      ],
+      "technologies": [
+        "Python",
+        "TensorFlow",
+        "PyTorch",
+        "OpenCV",
+        "MLOps",
+        "FastAPI",
+        "Docker",
+        "YOLO"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science in Information Security",
+      "institution": "National University of Sciences and Technology (NUST)",
+      "duration": "2024 - 2026",
+      "location": "Islamabad, Pakistan",
+      "gpa": "3.5 / 4.0",
+      "coursework": [
+        "Advanced Cryptography",
+        "Network Security",
+        "AI Security & Privacy"
+      ],
+      "logo": "/assets/NUST.png",
+      "website": "https://nust.edu.pk"
+    },
+    {
+      "degree": "Bachelor of Science in Electrical Engineering",
+      "institution": "Ghulam Ishaq Khan Institute (GIKI)",
+      "duration": "2018 - 2022",
+      "location": "Topi, Pakistan",
+      "gpa": "3.6 / 4.0",
+      "coursework": [
+        "Digital Signal Processing",
+        "Computer Programming",
+        "Data Structures & Algorithms",
+        "Machine Learning"
+      ],
+      "logo": "/assets/GIKI.png",
+      "website": "https://giki.edu.pk"
+    }
+  ],
+  "skills": {
+    "Computer Vision & Deep Learning": [
+      "PyTorch",
+      "TensorFlow",
+      "OpenCV",
+      "YOLO (v5/v8/v11)",
+      "Faster R-CNN",
+      "DeepSORT",
+      "Mediapipe",
+      "Image Segmentation",
+      "Face Recognition"
+    ],
+    "Languages & Frameworks": [
+      "Python",
+      "C++",
+      "FastAPI",
+      "Flask",
+      "React",
+      "Electron",
+      "JavaScript / TypeScript",
+      "SQL"
+    ],
+    "MLOps & Cloud Infrastructure": [
+      "Docker",
+      "Git & GitHub Actions",
+      "TensorRT",
+      "ONNX Runtime",
+      "MLflow",
+      "Linux Administration",
+      "AWS (S3, EC2)"
+    ],
+    "Domains & Methodologies": [
+      "Object Detection & Tracking",
+      "Infrastructure & Road Condition Assessment",
+      "Dataset Annotation Tool Engineering",
+      "Model Quantization & Inference Speedup",
+      "Cybersecurity & AI Privacy"
+    ]
+  },
+  "certifications": [
+    {
+      "title": "Introduction to Cybersecurity",
+      "issuer": "Cisco",
+      "date": "Nov 2024",
+      "skills": [
+        "Cyber Best Practices",
+        "Network Vulnerabilities",
+        "Threat Detection",
+        "Data Privacy"
+      ],
+      "url": "https://www.credly.com/badges/0e4c8c6e-2e4d-4e6c-8e6e-8e6e8e6e8e6e/public_url"
+    },
+    {
+      "title": "Machine Learning Specialization",
+      "issuer": "DeepLearning.AI",
+      "date": "Dec 2023",
+      "skills": [
+        "Machine Learning",
+        "Neural Networks",
+        "Model Optimization",
+        "Supervised Learning"
+      ],
+      "url": "https://www.coursera.org/account/accomplishments/certificate/GHQJ6TG2WZNP"
+    },
+    {
+      "title": "AI For Everyone",
+      "issuer": "DeepLearning.AI",
+      "date": "Aug 2023",
+      "skills": [
+        "Artificial Intelligence (AI)",
+        "AI Strategy",
+        "Tech Workflows"
+      ],
+      "url": "https://www.coursera.org/account/accomplishments/certificate/PAQ83ELPAMEQ"
+    },
+    {
+      "title": "Analyze Data to Answer Questions",
+      "issuer": "Coursera / Google",
+      "date": "Jun 2023",
+      "skills": [
+        "Data Analysis",
+        "SQL",
+        "Google BigQuery",
+        "Spreadsheets"
+      ],
+      "url": "https://www.coursera.org/account/accomplishments/certificate/U3V9RKJG3GP3"
+    },
+    {
+      "title": "Process Data from Dirty to Clean",
+      "issuer": "Coursera / Google",
+      "date": "May 2023",
+      "skills": [
+        "Data Cleaning",
+        "SQL",
+        "BigQuery",
+        "Data Preparation"
+      ],
+      "url": "https://www.coursera.org/account/accomplishments/certificate/65E9RV2K5Q2M"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Smart-Annotator",
+      "title": "Smart-Annotator",
+      "problem": "Manual image quality control and annotation review is slow, error-prone, and inconsistent.",
+      "fix": "Cross-platform React + Electron desktop tool with Flask backend for XML/JSON polygon & bounding box quality control and auto-save.",
+      "proof": "XML/JSON · LabelMe · Auto-save",
+      "repo": "https://github.com/zahid-marwat/smart-annotator",
+      "githubUrl": "https://github.com/zahid-marwat/smart-annotator",
+      "live": "",
+      "image": "/assets/smart-annotator/1.png",
+      "images": [
+        "/assets/smart-annotator/1.png",
+        "/assets/smart-annotator/2.png",
+        "/assets/smart-annotator/3.png",
+        "/assets/smart-annotator/4.png",
+        "/assets/smart-annotator/5.png",
+        "/assets/smart-annotator/6.png"
+      ],
+      "tags": [
+        "React",
+        "Electron",
+        "Flask",
+        "Python",
+        "LabelMe",
+        "XML",
+        "JSON"
+      ],
+      "longDescription": "Smart-Annotator is a cross-platform desktop application built with React and Electron, featuring a Flask backend for robust image annotation quality control. Supports detection (XML) and segmentation (JSON/LabelMe) formats, per-object attributes, auto-save, and an interactive canvas with zoom/pan capabilities.",
+      "features": [
+        "Per-object attributes (JSON + XML) with isolated updates",
+        "Electron-first save paths with backend fallback",
+        "Auto-save and unified Ctrl+S for geometry and attributes",
+        "Interactive canvas with polygons, bounding boxes, zoom/pan"
+      ],
+      "category": "Desktop Application",
+      "year": "2025",
+      "zahid": "Built for high-volume dataset annotation and quality verification in computer vision workflows.",
+      "zahidMood": "proud"
+    },
+    {
+      "id": 2,
+      "name": "Road Assets Condition Index",
+      "title": "Road Assets Condition Index",
+      "problem": "Inspecting roadside infrastructure manually takes thousands of hours and yields inaccurate asset condition scores.",
+      "fix": "Automated computer vision system using YOLO and GPS metadata to detect roadside assets, tag coordinates, and compute Asset Condition Index (ACI).",
+      "proof": "YOLO · GeoPandas · GPS Mapping",
+      "repo": "https://github.com/zahid-marwat/road-assets-condition-index",
+      "githubUrl": "https://github.com/zahid-marwat/road-assets-condition-index",
+      "live": "https://road-assets-aci-demo.vercel.app",
+      "image": "/assets/road-assets-aci/1.jpg",
+      "images": [
+        "/assets/road-assets-aci/1.jpg",
+        "/assets/road-assets-aci/2.jpg",
+        "/assets/road-assets-aci/3.jpg",
+        "/assets/road-assets-aci/4.jpg",
+        "/assets/road-assets-aci/5.jpg",
+        "/assets/road-assets-aci/6.jpg",
+        "/assets/road-assets-aci/7.jpg",
+        "/assets/road-assets-aci/8.jpg"
+      ],
+      "tags": [
+        "Python",
+        "YOLO",
+        "OpenCV",
+        "FastAPI",
+        "GeoPandas",
+        "TensorFlow",
+        "Docker"
+      ],
+      "longDescription": "A computer vision solution for smart infrastructure management. The system automatically detects various roadside assets (traffic signs, safety barriers, street lights), estimates location using GPS metadata, and computes an Asset Condition Index (ACI) based on deep learning visual analysis.",
+      "features": [
+        "Roadside asset detection (signs, barriers, lights)",
+        "Asset Condition Index (ACI) visual calculation",
+        "GPS-based location tagging and mapping",
+        "Condition assessment using deep learning"
+      ],
+      "category": "Computer Vision",
+      "year": "2025",
+      "zahid": "Automates smart municipal infrastructure surveys with real-time GPS mapping.",
+      "zahidMood": "happy"
+    },
+    {
+      "id": 3,
+      "name": "Road Cracks Detection & PCI Assessment",
+      "title": "Road Cracks Detection & PCI Assessment",
+      "problem": "Pavement degradation is diagnosed late, causing expensive full-road reconstructions.",
+      "fix": "Deep learning system using Faster R-CNN & YOLO to categorize pavement cracks, compute Pavement Condition Index (PCI), and generate repair bill of quantities.",
+      "proof": "Faster RCNN · PCI Scoring",
+      "repo": "https://github.com/zahid-marwat/road-cracks-detection",
+      "githubUrl": "https://github.com/zahid-marwat/road-cracks-detection",
+      "live": "https://road-cracks-detection-demo.vercel.app",
+      "image": "/assets/cracks-project/1.png",
+      "images": [
+        "/assets/cracks-project/1.png",
+        "/assets/cracks-project/2.png",
+        "/assets/cracks-project/3.png",
+        "/assets/cracks-project/4.png",
+        "/assets/cracks-project/5.png",
+        "/assets/cracks-project/6.png",
+        "/assets/cracks-project/7.png"
+      ],
+      "tags": [
+        "Python",
+        "Faster RCNN",
+        "OpenCV",
+        "TensorFlow",
+        "FastAPI",
+        "YOLO"
+      ],
+      "longDescription": "An AI-powered solution for automated road crack detection and classification using computer vision. The system analyzes road surface images, identifies crack types (longitudinal, transverse, alligator), calculates PCI scores, and suggests optimal maintenance strategies.",
+      "features": [
+        "Automated crack detection and classification",
+        "PCI (Pavement Condition Index) scoring",
+        "Maintenance strategy recommendation",
+        "Detailed bill of quantities generation"
+      ],
+      "category": "Computer Vision",
+      "year": "2024",
+      "zahid": "Identifies early pavement defects to save millions in municipal maintenance costs.",
+      "zahidMood": "wow"
+    },
+    {
+      "id": 4,
+      "name": "AI-Powered Face Recognition System",
+      "title": "AI-Powered Face Recognition System",
+      "problem": "Traditional attendance and access control systems suffer from proxy attendance and spoofing attacks.",
+      "fix": "Real-time deep learning facial detection and recognition system with anti-spoofing liveness detection and automated web admin portal.",
+      "proof": "99.2% Accuracy · Liveness Detection",
+      "repo": "https://github.com/zahid-marwat/face-recognition-system",
+      "githubUrl": "https://github.com/zahid-marwat/face-recognition-system",
+      "live": "https://face-recognition-demo.vercel.app",
+      "image": "/assets/face-detection-project/4.webp",
+      "images": [
+        "/assets/face-detection-project/1.jpg",
+        "/assets/face-detection-project/2.jpg",
+        "/assets/face-detection-project/3.jpg",
+        "/assets/face-detection-project/4.webp"
+      ],
+      "tags": [
+        "Python",
+        "OpenCV",
+        "TensorFlow",
+        "Flask",
+        "SQLite",
+        "dlib"
+      ],
+      "longDescription": "Leverages state-of-the-art deep learning models to provide real-time face detection and recognition capabilities. Handles multiple faces simultaneously with anti-spoofing and liveness checks for secure access control.",
+      "features": [
+        "Real-time face detection with 99.2% accuracy",
+        "Multi-face recognition and tracking",
+        "Anti-spoofing and liveness detection",
+        "Web-based admin dashboard"
+      ],
+      "category": "Computer Vision",
+      "year": "2023",
+      "zahid": "Delivers biometric security with sub-second facial verification.",
+      "zahidMood": "happy"
+    },
+    {
+      "id": 5,
+      "name": "Intelligent Traffic Monitoring System",
+      "title": "Intelligent Traffic Monitoring System",
+      "problem": "City traffic controllers lack real-time visibility into traffic density, speed violations, and vehicle counts.",
+      "fix": "YOLO-powered computer vision pipeline analyzing multi-lane video streams to count vehicles, estimate speeds, and recognize license plates.",
+      "proof": "YOLO · Speed OCR · DeepSORT",
+      "repo": "https://github.com/zahid-marwat/traffic-monitoring-system",
+      "githubUrl": "https://github.com/zahid-marwat/traffic-monitoring-system",
+      "live": "https://traffic-monitor-demo.vercel.app",
+      "image": "/assets/traffice-monitoring-project/1.jpg",
+      "images": [
+        "/assets/traffice-monitoring-project/1.jpg"
+      ],
+      "tags": [
+        "Python",
+        "YOLO",
+        "OpenCV",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "longDescription": "An intelligent traffic monitoring system that uses YOLO object detection and computer vision techniques to analyze traffic patterns, count vehicles, estimate speeds, and provide real-time insights.",
+      "features": [
+        "Real-time vehicle detection and classification",
+        "Traffic density analysis and counting",
+        "Speed estimation and monitoring",
+        "License plate recognition (OCR)"
+      ],
+      "category": "Computer Vision",
+      "year": "2023",
+      "zahid": "Processes multi-camera streams to assist smart traffic management.",
+      "zahidMood": "focus"
+    },
+    {
+      "id": 6,
+      "name": "Obfuscated Malware Detection System",
+      "title": "Obfuscated Malware Detection System",
+      "problem": "Modern malware authors use packing, encryption, and obfuscation to evade traditional signature-based antivirus engines.",
+      "fix": "AI/ML classification pipeline analyzing RAM memory dumps, API call sequences, and PE header features to detect obfuscated malware variants.",
+      "proof": "Memory Features · Scikit-Learn · High Precision",
+      "repo": "https://github.com/zahid-marwat/Detecting_Obfuscated_malwares",
+      "githubUrl": "https://github.com/zahid-marwat/Detecting_Obfuscated_malwares",
+      "live": "",
+      "image": "/assets/malware-detection/1.png",
+      "images": [
+        "/assets/malware-detection/1.png",
+        "/assets/malware-detection/2.png"
+      ],
+      "tags": [
+        "Python",
+        "Machine Learning",
+        "Cybersecurity",
+        "Memory Analysis",
+        "scikit-learn",
+        "PE-File"
+      ],
+      "longDescription": "A machine learning cybersecurity framework designed to detect obfuscated and packed malware variants. Features automated feature extraction from memory dumps, API call tracing, and evaluation across multiple ML classifier architectures to identify zero-day evasive malware.",
+      "features": [
+        "Detection of packed & obfuscated malware samples",
+        "RAM memory dump & PE header feature extraction",
+        "High-precision classification minimizing false positives",
+        "Evaluated using Random Forest, XGBoost & SVM classifiers"
+      ],
+      "category": "Cybersecurity",
+      "year": "2024",
+      "zahid": "Analyzes memory dumps to classify evasive, obfuscated malware variants.",
+      "zahidMood": "focus"
+    },
+    {
+      "id": 7,
+      "name": "Botnet Attack Detection System",
+      "title": "Botnet Attack Detection System",
+      "problem": "Distributed botnet DDoS attacks overload infrastructure before network administrators can analyze malicious traffic signatures.",
+      "fix": "Real-time network traffic analysis powered by deep neural networks to identify botnet C2 communication channels and anomaly patterns.",
+      "proof": "Deep Learning · Network Traffic · Anomaly Detection",
+      "repo": "https://github.com/zahid-marwat/BOTNET-attack-Detection-project",
+      "githubUrl": "https://github.com/zahid-marwat/BOTNET-attack-Detection-project",
+      "live": "",
+      "image": "/assets/botnet-detection/1.png",
+      "images": [
+        "/assets/botnet-detection/1.png",
+        "/assets/botnet-detection/2.png"
+      ],
+      "tags": [
+        "Python",
+        "Deep Learning",
+        "Network Security",
+        "Botnet Detection",
+        "Jupyter",
+        "PyTorch"
+      ],
+      "longDescription": "An intelligent network defense system utilizing deep learning models to analyze live network flow data. Detects botnet command-and-control channels, DDoS floods, and network anomalies before disruption occurs.",
+      "features": [
+        "Real-time network flow anomaly detection",
+        "Identifies botnet C2 communication signatures",
+        "Automated threat scoring and alert triggers",
+        "Deep learning model trained on benchmark network attack traffic"
+      ],
+      "category": "Cybersecurity",
+      "year": "2024",
+      "zahid": "Monitors network traffic streams to detect and mitigate botnet DDoS threats.",
+      "zahidMood": "wow"
+    }
+  ],
+  "problems": [
+    {
+      "id": 1,
+      "name": "Smart-Annotator",
+      "title": "Smart-Annotator",
+      "problem": "Manual image quality control and annotation review is slow, error-prone, and inconsistent.",
+      "fix": "Cross-platform React + Electron desktop tool with Flask backend for XML/JSON polygon & bounding box quality control and auto-save.",
+      "proof": "XML/JSON · LabelMe · Auto-save",
+      "repo": "https://github.com/zahid-marwat/smart-annotator",
+      "githubUrl": "https://github.com/zahid-marwat/smart-annotator",
+      "live": "",
+      "image": "/assets/smart-annotator/1.png",
+      "images": [
+        "/assets/smart-annotator/1.png",
+        "/assets/smart-annotator/2.png",
+        "/assets/smart-annotator/3.png",
+        "/assets/smart-annotator/4.png",
+        "/assets/smart-annotator/5.png",
+        "/assets/smart-annotator/6.png"
+      ],
+      "tags": [
+        "React",
+        "Electron",
+        "Flask",
+        "Python",
+        "LabelMe",
+        "XML",
+        "JSON"
+      ],
+      "longDescription": "Smart-Annotator is a cross-platform desktop application built with React and Electron, featuring a Flask backend for robust image annotation quality control. Supports detection (XML) and segmentation (JSON/LabelMe) formats, per-object attributes, auto-save, and an interactive canvas with zoom/pan capabilities.",
+      "features": [
+        "Per-object attributes (JSON + XML) with isolated updates",
+        "Electron-first save paths with backend fallback",
+        "Auto-save and unified Ctrl+S for geometry and attributes",
+        "Interactive canvas with polygons, bounding boxes, zoom/pan"
+      ],
+      "category": "Desktop Application",
+      "year": "2025",
+      "zahid": "Built for high-volume dataset annotation and quality verification in computer vision workflows.",
+      "zahidMood": "proud"
+    },
+    {
+      "id": 2,
+      "name": "Road Assets Condition Index",
+      "title": "Road Assets Condition Index",
+      "problem": "Inspecting roadside infrastructure manually takes thousands of hours and yields inaccurate asset condition scores.",
+      "fix": "Automated computer vision system using YOLO and GPS metadata to detect roadside assets, tag coordinates, and compute Asset Condition Index (ACI).",
+      "proof": "YOLO · GeoPandas · GPS Mapping",
+      "repo": "https://github.com/zahid-marwat/road-assets-condition-index",
+      "githubUrl": "https://github.com/zahid-marwat/road-assets-condition-index",
+      "live": "https://road-assets-aci-demo.vercel.app",
+      "image": "/assets/road-assets-aci/1.jpg",
+      "images": [
+        "/assets/road-assets-aci/1.jpg",
+        "/assets/road-assets-aci/2.jpg",
+        "/assets/road-assets-aci/3.jpg",
+        "/assets/road-assets-aci/4.jpg",
+        "/assets/road-assets-aci/5.jpg",
+        "/assets/road-assets-aci/6.jpg",
+        "/assets/road-assets-aci/7.jpg",
+        "/assets/road-assets-aci/8.jpg"
+      ],
+      "tags": [
+        "Python",
+        "YOLO",
+        "OpenCV",
+        "FastAPI",
+        "GeoPandas",
+        "TensorFlow",
+        "Docker"
+      ],
+      "longDescription": "A computer vision solution for smart infrastructure management. The system automatically detects various roadside assets (traffic signs, safety barriers, street lights), estimates location using GPS metadata, and computes an Asset Condition Index (ACI) based on deep learning visual analysis.",
+      "features": [
+        "Roadside asset detection (signs, barriers, lights)",
+        "Asset Condition Index (ACI) visual calculation",
+        "GPS-based location tagging and mapping",
+        "Condition assessment using deep learning"
+      ],
+      "category": "Computer Vision",
+      "year": "2025",
+      "zahid": "Automates smart municipal infrastructure surveys with real-time GPS mapping.",
+      "zahidMood": "happy"
+    },
+    {
+      "id": 3,
+      "name": "Road Cracks Detection & PCI Assessment",
+      "title": "Road Cracks Detection & PCI Assessment",
+      "problem": "Pavement degradation is diagnosed late, causing expensive full-road reconstructions.",
+      "fix": "Deep learning system using Faster R-CNN & YOLO to categorize pavement cracks, compute Pavement Condition Index (PCI), and generate repair bill of quantities.",
+      "proof": "Faster RCNN · PCI Scoring",
+      "repo": "https://github.com/zahid-marwat/road-cracks-detection",
+      "githubUrl": "https://github.com/zahid-marwat/road-cracks-detection",
+      "live": "https://road-cracks-detection-demo.vercel.app",
+      "image": "/assets/cracks-project/1.png",
+      "images": [
+        "/assets/cracks-project/1.png",
+        "/assets/cracks-project/2.png",
+        "/assets/cracks-project/3.png",
+        "/assets/cracks-project/4.png",
+        "/assets/cracks-project/5.png",
+        "/assets/cracks-project/6.png",
+        "/assets/cracks-project/7.png"
+      ],
+      "tags": [
+        "Python",
+        "Faster RCNN",
+        "OpenCV",
+        "TensorFlow",
+        "FastAPI",
+        "YOLO"
+      ],
+      "longDescription": "An AI-powered solution for automated road crack detection and classification using computer vision. The system analyzes road surface images, identifies crack types (longitudinal, transverse, alligator), calculates PCI scores, and suggests optimal maintenance strategies.",
+      "features": [
+        "Automated crack detection and classification",
+        "PCI (Pavement Condition Index) scoring",
+        "Maintenance strategy recommendation",
+        "Detailed bill of quantities generation"
+      ],
+      "category": "Computer Vision",
+      "year": "2024",
+      "zahid": "Identifies early pavement defects to save millions in municipal maintenance costs.",
+      "zahidMood": "wow"
+    },
+    {
+      "id": 4,
+      "name": "AI-Powered Face Recognition System",
+      "title": "AI-Powered Face Recognition System",
+      "problem": "Traditional attendance and access control systems suffer from proxy attendance and spoofing attacks.",
+      "fix": "Real-time deep learning facial detection and recognition system with anti-spoofing liveness detection and automated web admin portal.",
+      "proof": "99.2% Accuracy · Liveness Detection",
+      "repo": "https://github.com/zahid-marwat/face-recognition-system",
+      "githubUrl": "https://github.com/zahid-marwat/face-recognition-system",
+      "live": "https://face-recognition-demo.vercel.app",
+      "image": "/assets/face-detection-project/4.webp",
+      "images": [
+        "/assets/face-detection-project/1.jpg",
+        "/assets/face-detection-project/2.jpg",
+        "/assets/face-detection-project/3.jpg",
+        "/assets/face-detection-project/4.webp"
+      ],
+      "tags": [
+        "Python",
+        "OpenCV",
+        "TensorFlow",
+        "Flask",
+        "SQLite",
+        "dlib"
+      ],
+      "longDescription": "Leverages state-of-the-art deep learning models to provide real-time face detection and recognition capabilities. Handles multiple faces simultaneously with anti-spoofing and liveness checks for secure access control.",
+      "features": [
+        "Real-time face detection with 99.2% accuracy",
+        "Multi-face recognition and tracking",
+        "Anti-spoofing and liveness detection",
+        "Web-based admin dashboard"
+      ],
+      "category": "Computer Vision",
+      "year": "2023",
+      "zahid": "Delivers biometric security with sub-second facial verification.",
+      "zahidMood": "happy"
+    },
+    {
+      "id": 5,
+      "name": "Intelligent Traffic Monitoring System",
+      "title": "Intelligent Traffic Monitoring System",
+      "problem": "City traffic controllers lack real-time visibility into traffic density, speed violations, and vehicle counts.",
+      "fix": "YOLO-powered computer vision pipeline analyzing multi-lane video streams to count vehicles, estimate speeds, and recognize license plates.",
+      "proof": "YOLO · Speed OCR · DeepSORT",
+      "repo": "https://github.com/zahid-marwat/traffic-monitoring-system",
+      "githubUrl": "https://github.com/zahid-marwat/traffic-monitoring-system",
+      "live": "https://traffic-monitor-demo.vercel.app",
+      "image": "/assets/traffice-monitoring-project/1.jpg",
+      "images": [
+        "/assets/traffice-monitoring-project/1.jpg"
+      ],
+      "tags": [
+        "Python",
+        "YOLO",
+        "OpenCV",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "longDescription": "An intelligent traffic monitoring system that uses YOLO object detection and computer vision techniques to analyze traffic patterns, count vehicles, estimate speeds, and provide real-time insights.",
+      "features": [
+        "Real-time vehicle detection and classification",
+        "Traffic density analysis and counting",
+        "Speed estimation and monitoring",
+        "License plate recognition (OCR)"
+      ],
+      "category": "Computer Vision",
+      "year": "2023",
+      "zahid": "Processes multi-camera streams to assist smart traffic management.",
+      "zahidMood": "focus"
+    },
+    {
+      "id": 6,
+      "name": "Obfuscated Malware Detection System",
+      "title": "Obfuscated Malware Detection System",
+      "problem": "Modern malware authors use packing, encryption, and obfuscation to evade traditional signature-based antivirus engines.",
+      "fix": "AI/ML classification pipeline analyzing RAM memory dumps, API call sequences, and PE header features to detect obfuscated malware variants.",
+      "proof": "Memory Features · Scikit-Learn · High Precision",
+      "repo": "https://github.com/zahid-marwat/Detecting_Obfuscated_malwares",
+      "githubUrl": "https://github.com/zahid-marwat/Detecting_Obfuscated_malwares",
+      "live": "",
+      "image": "/assets/malware-detection/1.png",
+      "images": [
+        "/assets/malware-detection/1.png",
+        "/assets/malware-detection/2.png"
+      ],
+      "tags": [
+        "Python",
+        "Machine Learning",
+        "Cybersecurity",
+        "Memory Analysis",
+        "scikit-learn",
+        "PE-File"
+      ],
+      "longDescription": "A machine learning cybersecurity framework designed to detect obfuscated and packed malware variants. Features automated feature extraction from memory dumps, API call tracing, and evaluation across multiple ML classifier architectures to identify zero-day evasive malware.",
+      "features": [
+        "Detection of packed & obfuscated malware samples",
+        "RAM memory dump & PE header feature extraction",
+        "High-precision classification minimizing false positives",
+        "Evaluated using Random Forest, XGBoost & SVM classifiers"
+      ],
+      "category": "Cybersecurity",
+      "year": "2024",
+      "zahid": "Analyzes memory dumps to classify evasive, obfuscated malware variants.",
+      "zahidMood": "focus"
+    },
+    {
+      "id": 7,
+      "name": "Botnet Attack Detection System",
+      "title": "Botnet Attack Detection System",
+      "problem": "Distributed botnet DDoS attacks overload infrastructure before network administrators can analyze malicious traffic signatures.",
+      "fix": "Real-time network traffic analysis powered by deep neural networks to identify botnet C2 communication channels and anomaly patterns.",
+      "proof": "Deep Learning · Network Traffic · Anomaly Detection",
+      "repo": "https://github.com/zahid-marwat/BOTNET-attack-Detection-project",
+      "githubUrl": "https://github.com/zahid-marwat/BOTNET-attack-Detection-project",
+      "live": "",
+      "image": "/assets/botnet-detection/1.png",
+      "images": [
+        "/assets/botnet-detection/1.png",
+        "/assets/botnet-detection/2.png"
+      ],
+      "tags": [
+        "Python",
+        "Deep Learning",
+        "Network Security",
+        "Botnet Detection",
+        "Jupyter",
+        "PyTorch"
+      ],
+      "longDescription": "An intelligent network defense system utilizing deep learning models to analyze live network flow data. Detects botnet command-and-control channels, DDoS floods, and network anomalies before disruption occurs.",
+      "features": [
+        "Real-time network flow anomaly detection",
+        "Identifies botnet C2 communication signatures",
+        "Automated threat scoring and alert triggers",
+        "Deep learning model trained on benchmark network attack traffic"
+      ],
+      "category": "Cybersecurity",
+      "year": "2024",
+      "zahid": "Monitors network traffic streams to detect and mitigate botnet DDoS threats.",
+      "zahidMood": "wow"
+    }
+  ],
+  "hunting": [
+    {
+      "text": "Edge AI optimization for low-power embedded vision cameras",
+      "repo": "https://github.com/zahid-marwat/smart-annotator"
+    },
+    {
+      "text": "Secure AI model watermarking and adversarial defense in computer vision",
+      "repo": "https://github.com/zahid-marwat/road-assets-condition-index"
+    }
+  ]
+}

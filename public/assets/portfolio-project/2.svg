@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0a1020"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(950 120) rotate(45) scale(480 380)">
+      <stop stop-color="#3b82f6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid3" width="45" height="45" patternUnits="userSpaceOnUse">
+      <path d="M 45 0 L 0 0 0 45" stroke="#3b82f6" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <rect width="1200" height="630" fill="url(#glow3)"/>
+  <rect width="1200" height="630" fill="url(#grid3)"/>
+
+  <g font-family="Inter, Segoe UI, Roboto, Arial, sans-serif" fill="#E5E7EB">
+    <text x="80" y="180" font-size="42" font-weight="700" fill="#FFFFFF">Let’s work together</text>
+    <text x="80" y="224" font-size="22" fill="#93C5FD">fbpzahid4830@gmail.com</text>
+    <text x="80" y="264" font-size="18" fill="#9CA3AF">LinkedIn • Github • Email</text>
+  </g>
+
+  <g opacity="0.9">
+    <rect x="80" y="320" width="460" height="70" rx="12" fill="#0f172a" stroke="#1f2937"/>
+    <text x="100" y="363" font-family="Inter, Arial" font-size="18" fill="#93C5FD">Available for Freelance & Full-time roles</text>
+  </g>
+
+  <g opacity="0.25">
+    <rect x="840" y="120" width="80" height="80" rx="10" stroke="#60a5fa"/>
+    <rect x="940" y="200" width="60" height="60" rx="8" stroke="#3b82f6"/>
+  </g>
+</svg>

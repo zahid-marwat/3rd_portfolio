@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0a1020"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1000 100) rotate(45) scale(500 400)">
+      <stop stop-color="#60a5fa" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid2" width="45" height="45" patternUnits="userSpaceOnUse">
+      <path d="M 45 0 L 0 0 0 45" stroke="#3b82f6" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <clipPath id="avatarClip2">
+      <circle cx="140" cy="200" r="90"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <rect width="1200" height="630" fill="url(#grid2)"/>
+
+  <g clip-path="url(#avatarClip2)">
+    <circle cx="140" cy="200" r="96" fill="#111827"/>
+    <image href="/assets/profile-picture.png" x="60" y="120" width="160" height="160" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <circle cx="140" cy="200" r="94" fill="none" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="3"/>
+
+  <g font-family="Inter, Segoe UI, Roboto, Arial, sans-serif" fill="#E5E7EB">
+    <text x="280" y="200" font-size="42" font-weight="700" fill="#FFFFFF">About Me</text>
+    <text x="280" y="242" font-size="22" fill="#93C5FD">Computer Vision Engineer • AI/ML</text>
+    <text x="280" y="284" font-size="18" fill="#9CA3AF">Building intelligent systems with performance and precision</text>
+  </g>
+
+  <g opacity="0.8">
+    <rect x="280" y="320" width="820" height="70" rx="12" fill="#0f172a" stroke="#1f2937"/>
+    <text x="300" y="363" font-family="Inter, Arial" font-size="18" fill="#93C5FD">Skills: Python • OpenCV • TensorFlow • FastAPI • Next.js • TypeScript</text>
+  </g>
+</svg>

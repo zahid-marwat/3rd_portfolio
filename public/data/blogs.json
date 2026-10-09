@@ -1,0 +1,42 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "slug": "computer-vision-in-infrastructure-monitoring",
+      "title": "Computer Vision in Infrastructure Monitoring: AI-Powered Road & Asset Inspection",
+      "description": "How modern deep learning object detection (YOLO, Faster R-CNN) and PCI assessment algorithms are revolutionizing road condition inspection and maintenance.",
+      "excerpt": "Exploring how deep learning models detect road pavement defects, calculate Pavement Condition Index (PCI), and automate municipal infrastructure surveys.",
+      "author": "Zahid Marwat",
+      "publishDate": "2025-01-15",
+      "readTime": "6 min read",
+      "category": "Computer Vision",
+      "tags": [
+        "Computer Vision",
+        "Deep Learning",
+        "YOLO",
+        "Python",
+        "Infrastructure"
+      ],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "slug": "building-desktop-annotation-tools-electron-react-flask",
+      "title": "Building Desktop Annotation & Quality Control Tools with Electron, React, and Flask",
+      "description": "Architecture and design patterns for building desktop annotation software that handles JSON, XML, and LabelMe formats with real-time bounding box and polygon rendering.",
+      "excerpt": "A deep dive into integrating Electron IPC, React interactive canvas components, and a Flask backend for high-speed dataset quality review.",
+      "author": "Zahid Marwat",
+      "publishDate": "2025-02-10",
+      "readTime": "8 min read",
+      "category": "Software Engineering",
+      "tags": [
+        "React",
+        "Electron",
+        "Flask",
+        "Python",
+        "Data Annotation"
+      ],
+      "featured": true
+    }
+  ]
+}

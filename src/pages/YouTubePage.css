@@ -1,0 +1,8 @@
+.youtube-page {
+  min-height: 100vh;
+  background: var(--paper);
+}
+
+.youtube-page .youtube-section {
+  padding-top: 100px;
+}

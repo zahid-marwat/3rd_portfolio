@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0a1020"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(950 120) rotate(45) scale(500 400)">
+      <stop stop-color="#3b82f6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="avatarClip">
+      <circle cx="220" cy="320" r="120"/>
+    </clipPath>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="transparent"/>
+      <path d="M 50 0 L 0 0 0 50" stroke="#3b82f6" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+
+  <!-- Decorative squares -->
+  <g opacity="0.2">
+    <rect x="820" y="90" width="80" height="80" rx="10" fill="none" stroke="#3b82f6" stroke-opacity="0.35"/>
+    <rect x="900" y="170" width="60" height="60" rx="8" fill="none" stroke="#60a5fa" stroke-opacity="0.3"/>
+    <rect x="780" y="180" width="40" height="40" rx="6" fill="none" stroke="#2563eb" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- Avatar -->
+  <g clip-path="url(#avatarClip)">
+    <circle cx="220" cy="320" r="130" fill="#111827"/>
+    <image href="/assets/profile-picture.png" x="90" y="190" width="260" height="260" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <circle cx="220" cy="320" r="124" fill="none" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="4"/>
+
+  <!-- Titles -->
+  <g font-family="Inter, Segoe UI, Roboto, Arial, sans-serif" fill="#E5E7EB">
+    <text x="380" y="300" font-size="48" font-weight="700" fill="#FFFFFF">Zahid Marwat</text>
+    <text x="380" y="348" font-size="24" fill="#93C5FD">Modern Portfolio</text>
+    <text x="380" y="392" font-size="18" fill="#9CA3AF">Next.js • TypeScript • Tailwind • Framer Motion</text>
+  </g>
+
+  <!-- Badge -->
+  <g>
+    <rect x="380" y="430" rx="12" ry="12" width="300" height="48" fill="#111827" stroke="#1f2937"/>
+    <text x="400" y="462" font-family="Inter, Arial" font-size="18" fill="#93C5FD">Performance Optimized • 100 Lighthouse</text>
+  </g>
+
+  <!-- Footer strip -->
+  <rect x="0" y="730" width="1200" height="70" fill="#0f172a"/>
+  <text x="40" y="772" font-family="Inter, Arial" font-size="18" fill="#93C5FD">zahid-marwat.vercel.app</text>
+  <text x="950" y="772" font-family="Inter, Arial" font-size="18" fill="#60A5FA">Portfolio Preview</text>
+</svg>
