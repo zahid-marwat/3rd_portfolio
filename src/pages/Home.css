@@ -895,28 +895,33 @@ body:has(.pf) {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
-.project-card {
+.pf .project-card {
   position: relative;
-  background: #ffffff;
-  color: #09090b;
-  border: 1px solid #e4e4e7;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--rule);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0;
   opacity: 0;
   transform: perspective(900px) translateY(28px);
   transition: transform 0.5s cubic-bezier(.2,.8,.2,1), opacity 0.6s, box-shadow 0.35s, border-color 0.35s;
   transition-delay: calc(var(--i) * 90ms);
 }
-.project-card.is-shown {
+.pf .project-card::before {
+  display: none;
+}
+.pf .project-card.is-shown {
   opacity: 1;
   transform: perspective(900px) rotateX(calc(var(--rx) * 1deg)) rotateY(calc(var(--ry) * 1deg));
 }
-.project-card:hover {
-  border-color: #18181b;
-  box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.25);
+.pf .project-card:hover {
+  background: var(--card);
+  border-color: color-mix(in srgb, var(--signal) 40%, var(--rule));
+  box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.4);
 }
 
 /* Compact Image Stage so pictures are sleek and proportional */
@@ -925,10 +930,11 @@ body:has(.pf) {
   height: 220px;
   max-height: 240px;
   width: 100%;
-  background: #09090b;
+  background: var(--screen);
   overflow: hidden;
   cursor: pointer;
   border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid var(--rule);
 }
 .card-img-stage img {
   width: 100%;
@@ -944,14 +950,14 @@ body:has(.pf) {
 .card-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.55) 100%);
   pointer-events: none;
 }
 .card-img-badge-left {
   position: absolute;
   top: 12px;
   left: 12px;
-  background: rgba(9, 9, 11, 0.88);
+  background: rgba(9, 9, 11, 0.82);
   backdrop-filter: blur(8px);
   padding: 4px 10px;
   border-radius: 999px;
@@ -964,7 +970,7 @@ body:has(.pf) {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(9, 9, 11, 0.88);
+  background: rgba(9, 9, 11, 0.82);
   backdrop-filter: blur(8px);
   padding: 4px 10px;
   border-radius: 999px;
@@ -979,8 +985,8 @@ body:has(.pf) {
 .card-body {
   padding: 20px 22px 16px;
   flex: 1;
-  background: #ffffff;
-  color: #09090b;
+  background: var(--card);
+  color: var(--ink);
 }
 .card-body-header {
   display: flex;
@@ -994,17 +1000,17 @@ body:has(.pf) {
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.25;
-  color: #09090b;
+  color: var(--ink);
   transition: color 0.2s ease;
 }
 .project-card:hover .card-body-header h3 {
-  color: #09090b;
+  color: var(--signal);
 }
 .card-year-pill {
   font: 500 11px/1 var(--mono);
-  color: #18181b;
-  background: #f4f4f5;
-  border: 1px solid #e4e4e7;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--paper) 70%, var(--card));
+  border: 1px solid var(--rule);
   padding: 4px 8px;
   border-radius: 4px;
   flex-shrink: 0;
@@ -1016,7 +1022,7 @@ body:has(.pf) {
 .card-features-title {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #71717a;
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   display: block;
@@ -1031,18 +1037,18 @@ body:has(.pf) {
   margin: 0;
 }
 .card-features-list li {
-  font-size: 0.8rem;
-  color: #18181b;
+  font-size: 0.82rem;
+  color: var(--ink);
   display: flex;
   align-items: flex-start;
-  gap: 6px;
-  line-height: 1.4;
+  gap: 8px;
+  line-height: 1.45;
 }
 .feature-dot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #09090b;
+  background: var(--signal);
   margin-top: 6px;
   flex-shrink: 0;
 }
@@ -1057,15 +1063,19 @@ body:has(.pf) {
   font-size: 0.75rem;
   padding: 3px 10px;
   border-radius: 999px;
-  background: #f4f4f5;
-  color: #09090b;
-  border: 1px solid #e4e4e7;
+  background: color-mix(in srgb, var(--paper) 80%, var(--card));
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  transition: color 0.2s, border-color 0.2s;
+}
+.project-card:hover .tag-pill {
+  color: var(--ink);
 }
 
 .card-action-bar {
   padding: 14px 22px;
-  background: #fafafa;
-  border-top: 1px solid #e4e4e7;
+  background: color-mix(in srgb, var(--paper) 60%, var(--card));
+  border-top: 1px solid var(--rule);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1073,7 +1083,7 @@ body:has(.pf) {
 .btn-shots {
   background: none;
   border: none;
-  color: #09090b;
+  color: var(--ink);
   font-size: 0.85rem;
   font-weight: 600;
   display: flex;
@@ -1081,10 +1091,10 @@ body:has(.pf) {
   gap: 6px;
   cursor: pointer;
   padding: 0;
-  transition: opacity 0.2s;
+  transition: color 0.2s, opacity 0.2s;
 }
 .btn-shots:hover {
-  opacity: 0.7;
+  color: var(--signal);
 }
 
 .card-action-links {
@@ -1095,21 +1105,21 @@ body:has(.pf) {
 .card-action-btn {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   font-size: 0.8rem;
   font-weight: 500;
-  padding: 5px 10px;
+  padding: 6px 12px;
   border-radius: 8px;
-  border: 1px solid #e4e4e7;
-  background: #ffffff;
-  color: #09090b;
+  border: 1px solid var(--rule);
+  background: var(--card);
+  color: var(--ink);
   text-decoration: none;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 .card-action-btn:hover {
-  color: #ffffff;
-  border-color: #09090b;
-  background: #09090b;
+  color: var(--paper);
+  border-color: var(--ink);
+  background: var(--ink);
 }
 
 /* Lightbox Modal */

@@ -13,7 +13,7 @@ const SECTIONS = [
   { id: 'experience', label: 'Experience' },
   { id: 'education', label: 'Education' },
   { id: 'shipped', label: 'Projects' },
-  { id: 'skills', label: 'Skills' },
+  { id: 'skills', label: 'Certifications' },
   { id: 'writing', label: 'Writing' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -61,7 +61,7 @@ const SECTION_LINE = {
   shipped: 'Explore my computer vision projects, models, and desktop applications.',
   experience: 'Senior Computer Vision Engineer at Airloop & MS in Information Security at NUST.',
   education: 'Academic qualifications from NUST and GIKI.',
-  skills: 'Technical stack in PyTorch, TensorFlow, OpenCV, FastAPI, and Docker.',
+  skills: 'Verified industry certifications and specializations.',
   writing: 'Technical engineering articles and computer vision tutorials.',
   contact: 'Have an AI project or computer vision challenge? Let\'s connect.',
 };
@@ -569,11 +569,6 @@ export default function Home({ portfolioData }) {
         <main className="pf-main">
           <section id="about" aria-label="About">
             <p className="lede rise" style={{ '--d': '100ms' }}>{personal.bio}</p>
-            <dl className="facts rise" style={{ '--d': '166ms' }}>
-              <div><CountUp value="3+" /><dd>Years in AI &amp; Computer Vision</dd></div>
-              <div><CountUp value="50+" /><dd>Deep Learning &amp; CV Projects Delivered</dd></div>
-              <div><CountUp value="95%+" /><dd>Accuracy on Real-time Object Detection Models</dd></div>
-            </dl>
           </section>
 
           <section id="experience" aria-labelledby="h-exp">
@@ -723,34 +718,19 @@ export default function Home({ portfolioData }) {
           </section>
 
           <section id="skills" aria-labelledby="h-skills">
-            <h2 id="h-skills" className="eyebrow">Technical Skills &amp; Certifications</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '24px' }}>
-              {Object.entries(skills).map(([category, items]) => (
-                <div key={category} style={{ background: 'var(--card)', padding: '16px', borderRadius: '12px', border: '1px solid var(--rule)' }}>
-                  <h4 style={{ color: 'var(--signal)', marginBottom: '10px', fontSize: '0.95rem', fontWeight: '600' }}>{category}</h4>
-                  <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                    {items.map((item) => (
-                      <li key={item} style={{ fontSize: '0.85rem', color: 'var(--ink)', marginBottom: '4px' }}>✓ {item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+            <h2 id="h-skills" className="eyebrow">Certifications</h2>
 
             {certList.length > 0 && (
-              <div>
-                <h3 className="eyebrow" style={{ marginTop: '24px', marginBottom: '12px' }}>Verified Certifications</h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
-                  {certList.map((c, idx) => (
-                    <li key={idx} style={{ background: 'var(--card)', padding: '12px 16px', borderRadius: '10px', border: '1px solid var(--rule)' }}>
-                      <a href={c.url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <div style={{ fontWeight: 'bold', fontSize: '0.9rem', color: 'var(--ink)' }}>{c.title} ↗</div>
-                        <div style={{ fontSize: '0.8rem', color: 'var(--muted)', marginTop: '2px' }}>{c.issuer} • {c.date}</div>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
+                {certList.map((c, idx) => (
+                  <li key={idx} style={{ background: 'var(--card)', padding: '14px 18px', borderRadius: '10px', border: '1px solid var(--rule)' }}>
+                    <a href={c.url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <div style={{ fontWeight: 'bold', fontSize: '0.95rem', color: 'var(--ink)' }}>{c.title} ↗</div>
+                      <div style={{ fontSize: '0.82rem', color: 'var(--muted)', marginTop: '4px' }}>{c.issuer} • {c.date}</div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             )}
           </section>
 

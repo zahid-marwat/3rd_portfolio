@@ -87,7 +87,7 @@
         "AI Security & Privacy"
       ],
       "logo": "/assets/NUST.png",
-      "website": "https://nust.edu.pk"
+      "website": "https://nust.edu.pk/"
     },
     {
       "degree": "Bachelor of Science in Electrical Engineering",
@@ -102,7 +102,7 @@
         "Machine Learning"
       ],
       "logo": "/assets/GIKI.png",
-      "website": "https://giki.edu.pk"
+      "website": "https://giki.edu.pk/"
     }
   ],
   "skills": {

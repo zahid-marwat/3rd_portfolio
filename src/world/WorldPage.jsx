@@ -1,4 +1,5 @@
 import { Suspense, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Canvas } from '@react-three/fiber';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -33,17 +34,99 @@ function useGithubRepos() {
 
 function Workshop({ data, repos, pick }) {
   const [open, setOpen] = useState(pick);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState(0);
   const list = data.problems || data.projects || [];
   const p = open && list.find((x) => x.name === open);
+
+  // Reset slide index whenever open project changes
+  useEffect(() => {
+    setSlideIndex(0);
+  }, [open]);
+
+  const images = p ? (p.images && p.images.length > 0 ? p.images : (p.image ? [p.image] : [])) : [];
+  const hasMultipleImages = images.length > 1;
+
+  // Auto-play slideshow every 3.5 seconds when not in modal view
+  useEffect(() => {
+    if (!open || !hasMultipleImages || modalOpen) return undefined;
+    const interval = setInterval(() => {
+      setSlideIndex((prev) => (prev + 1) % images.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [open, hasMultipleImages, images.length, modalOpen]);
+
+  // Modal keyboard navigation and body lock
+  useEffect(() => {
+    if (!modalOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') setModalOpen(false);
+      if (e.key === 'ArrowLeft') setModalIndex((prev) => (prev - 1 + images.length) % images.length);
+      if (e.key === 'ArrowRight') setModalIndex((prev) => (prev + 1) % images.length);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [modalOpen, images.length]);
+
+  const handleOpenModal = (idx) => {
+    setModalIndex(idx);
+    setModalOpen(true);
+  };
+
+  const nextModalSlide = () => {
+    setModalIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevModalSlide = () => {
+    setModalIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
     <>
       <h2>Projects & AI Systems</h2>
       {p ? (
         <div className="w-detail">
           <button type="button" className="w-back" onClick={() => setOpen(null)}>← All projects</button>
-          <p className="w-problem"><em>problem</em> <s>{p.problem}</s></p>
+          <p className="w-problem"><em>problem</em> <span>{p.problem}</span></p>
           <h3>{p.name}</h3>
-          {p.image && <img className="w-thumb" src={p.image} alt={p.name} loading="lazy" />}
+          {images.length > 0 && (
+            <div
+              className="w-slideshow"
+              onClick={() => handleOpenModal(slideIndex)}
+              title="Click to view full size"
+            >
+              <div className="w-slide-wrapper">
+                <img
+                  className="w-thumb"
+                  src={images[slideIndex]}
+                  alt={`${p.name} screenshot ${slideIndex + 1}`}
+                  loading="lazy"
+                />
+                <div className="w-slide-zoom-hint">
+                  🔍 Click to expand
+                </div>
+                {hasMultipleImages && (
+                  <div className="w-slide-counter">
+                    {slideIndex + 1} / {images.length}
+                  </div>
+                )}
+              </div>
+              {hasMultipleImages && (
+                <div className="w-slide-dots" onClick={(e) => e.stopPropagation()}>
+                  {images.map((_, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      className={`w-slide-dot ${idx === slideIndex ? 'active' : ''}`}
+                      onClick={() => setSlideIndex(idx)}
+                      aria-label={`Go to image ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
           <p>{p.longDescription || p.fix}</p>
           <p className="w-proof">{p.proof}</p>
           {p.features && p.features.length > 0 && (
@@ -55,6 +138,69 @@ function Workshop({ data, repos, pick }) {
             {p.repo && <a className="w-btn" href={p.repo} target="_blank" rel="noreferrer">Open on GitHub ↗</a>}
             {p.live && <a className="w-btn ghost" href={p.live} target="_blank" rel="noreferrer">Try it live ↗</a>}
           </div>
+
+          {/* Fullscreen Lightbox Modal (portaled to document.body) */}
+          {modalOpen && typeof document !== 'undefined' && createPortal(
+            <div className="w-modal-overlay" onClick={() => setModalOpen(false)}>
+              <div className="w-modal-container" onClick={(e) => e.stopPropagation()}>
+                <div className="w-modal-header">
+                  <div className="w-modal-title-group">
+                    <span className="w-modal-title">{p.name}</span>
+                    <span className="w-modal-counter">{modalIndex + 1} of {images.length}</span>
+                  </div>
+                  <button
+                    type="button"
+                    className="w-modal-close"
+                    onClick={() => setModalOpen(false)}
+                    aria-label="Close full view"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div className="w-modal-stage">
+                  <img
+                    src={images[modalIndex]}
+                    alt={`${p.name} full view ${modalIndex + 1}`}
+                  />
+                  {hasMultipleImages && (
+                    <>
+                      <button
+                        type="button"
+                        className="w-modal-nav prev"
+                        onClick={prevModalSlide}
+                        aria-label="Previous image"
+                      >
+                        ‹
+                      </button>
+                      <button
+                        type="button"
+                        className="w-modal-nav next"
+                        onClick={nextModalSlide}
+                        aria-label="Next image"
+                      >
+                        ›
+                      </button>
+                    </>
+                  )}
+                </div>
+                {hasMultipleImages && (
+                  <div className="w-modal-thumbs">
+                    {images.map((img, idx) => (
+                      <button
+                        key={idx}
+                        type="button"
+                        className={`w-modal-thumb ${idx === modalIndex ? 'active' : ''}`}
+                        onClick={() => setModalIndex(idx)}
+                      >
+                        <img src={img} alt="" />
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>,
+            document.body
+          )}
         </div>
       ) : (
         <ul className="w-list">
@@ -127,11 +273,6 @@ function Office({ data }) {
           );
         })}
       </ol>
-      <div className="w-facts">
-        <div><b>3+</b><span>Years in AI &amp; CV</span></div>
-        <div><b>50+</b><span>Projects delivered</span></div>
-        <div><b>95%+</b><span>Model Accuracy</span></div>
-      </div>
     </>
   );
 }
@@ -145,16 +286,29 @@ function School({ data }) {
       <ol className="w-jobs">
         {edu.map((e) => {
           const eduLogo = e.logo || e.institutionLogo || (e.institution.includes('NUST') ? '/assets/NUST.png' : (e.institution.includes('GIKI') ? '/assets/GIKI.png' : null));
+          const siteUrl = e.website || (e.institution.includes('GIKI') ? 'https://giki.edu.pk/' : (e.institution.includes('NUST') ? 'https://nust.edu.pk/' : null));
           return (
             <li key={e.institution + e.degree} className="w-job-item">
               <div className="w-job-header">
                 {eduLogo && (
-                  <img src={eduLogo} alt={e.institution} className="w-job-logo" />
+                  siteUrl ? (
+                    <a href={siteUrl} target="_blank" rel="noreferrer" title={`Visit ${e.institution}`}>
+                      <img src={eduLogo} alt={e.institution} className="w-job-logo" />
+                    </a>
+                  ) : (
+                    <img src={eduLogo} alt={e.institution} className="w-job-logo" />
+                  )
                 )}
                 <div className="w-job-title-group">
                   <div className="w-job-title">{e.degree}</div>
                   <div className="w-job-company">
-                    {e.institution} · <span className="w-when">{e.duration}</span>
+                    {siteUrl ? (
+                      <a href={siteUrl} target="_blank" rel="noreferrer" className="w-edu-link">
+                        {e.institution}
+                      </a>
+                    ) : (
+                      e.institution
+                    )} · <span className="w-when">{e.duration}</span>
                   </div>
                 </div>
               </div>
@@ -221,13 +375,31 @@ Greenhouse.propTypes = { data: PropTypes.object.isRequired };
 
 function Post({ data }) {
   const p = data.personal || {};
+  const [copied, setCopied] = useState(false);
   const wa = (data.social || []).find((s) => s.platform === 'WhatsApp');
+
+  const copyEmail = (e) => {
+    e.preventDefault();
+    if (!p.email) return;
+    navigator.clipboard.writeText(p.email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }).catch(() => {});
+  };
+
   return (
     <>
       <h2>Let&apos;s connect</h2>
       <p className="w-lede">Open to Computer Vision, Deep Learning, and AI projects.</p>
       <div className="w-actions col">
-        <a className="w-btn" href={`mailto:${p.email}`}>✉ {p.email}</a>
+        <a
+          className="w-btn"
+          href={`mailto:${p.email}`}
+          onClick={copyEmail}
+          title={copied ? 'Copied to clipboard!' : 'Click to copy email address'}
+        >
+          ✉ {p.email} &nbsp; <i className={copied ? 'fa-solid fa-check' : 'fa-regular fa-copy'} aria-hidden="true"></i>
+        </a>
         {wa && <a className="w-btn ghost" href={wa.url} target="_blank" rel="noreferrer">WhatsApp ↗</a>}
         <button type="button" className="w-btn ghost" onClick={() => generateCV(data)}>Download CV ↓</button>
       </div>

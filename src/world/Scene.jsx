@@ -668,7 +668,7 @@ const SCATTER = (() => {
   }
   return out;
 })();
-const MILL = new THREE.Vector3(0.55, -0.35, -0.76).normalize();
+const MILL = new THREE.Vector3(-0.15, -0.68, 0.71).normalize();
 
 const PICK = {
   tree: [['tree_oak', 1.9], ['tree_default', 1.8], ['tree_detailed', 2.0], ['tree_fat', 1.6], ['tree_pineRoundA', 2.0], ['tree_pineTallA_detailed', 2.5], ['tree_oak_fall', 1.9], ['tree_default_fall', 1.8], ['tree_small', 1.2]],
@@ -779,11 +779,20 @@ export default function Scene({ phase, stop, onStop, data, compact }) {
   const { gl } = useThree();
 
   const stopQ = useMemo(() => (stop ? faceQuat(STOP_DIRS[STOPS.findIndex((s) => s.id === stop)]) : null), [stop]);
-  // Where Kamil stands at a place: front-left of it once the planet has turned it to the top.
-  const STAND_W = useMemo(() => TOP.clone().add(new THREE.Vector3(-0.13, -0.02, 0.12)).normalize(), []);
-  const STAND_SCHOOL_W = useMemo(() => TOP.clone().add(new THREE.Vector3(-0.26, -0.01, 0.28)).normalize(), []);
+  // Where Kamil stands at each stop: positioned comfortably in front/front-left of buildings without clipping
+  const STAND_OFFSETS = useMemo(() => ({
+    workshop: new THREE.Vector3(-0.20, -0.01, 0.26),
+    office: new THREE.Vector3(-0.18, -0.01, 0.24),
+    school: new THREE.Vector3(-0.28, -0.01, 0.30),
+    tower: new THREE.Vector3(-0.20, -0.01, 0.24),
+    greenhouse: new THREE.Vector3(-0.22, -0.01, 0.25),
+    post: new THREE.Vector3(-0.18, -0.01, 0.26),
+    default: new THREE.Vector3(-0.20, -0.01, 0.25),
+  }), []);
+
   const standFor = (fq, currentStop) => {
-    const targetStand = currentStop === 'school' ? STAND_SCHOOL_W : STAND_W;
+    const offset = (currentStop && STAND_OFFSETS[currentStop]) || STAND_OFFSETS.default;
+    const targetStand = TOP.clone().add(offset).normalize();
     return targetStand.clone().applyQuaternion(fq.clone().invert());
   };
   // On the landing he waits at HOME, a meadow between the Workshop and the Greenhouse.
@@ -796,8 +805,16 @@ export default function Scene({ phase, stop, onStop, data, compact }) {
   useFrame((state, dt) => {
     const { camera } = state;
     const landing = phase === 'landing';
-    const cam = landing ? (compact ? [0, 6, 52] : [-14, 9, 58]) : compact ? (stop ? [0, 18, 13] : [0, 22.5, 18]) : stop ? [1.4, 15.2, 14.5] : [0, 17.5, 22];
-    const look = landing ? (compact ? [0, -6.8, 0] : [-14, 2, 0]) : compact ? (stop ? [0, 5.6, 2.8] : [0, 4.6, 0]) : stop ? [2.7, 10.4, 3.4] : [0, 9.2, 2];
+    const cam = landing
+      ? (compact ? [0, 6, 52] : [-14, 9, 58])
+      : compact
+        ? (stop ? [0, 21.6, 15.6] : [0, 22.5, 18])
+        : stop ? [1.68, 18.24, 17.4] : [0, 17.5, 22];
+    const look = landing
+      ? (compact ? [0, -6.8, 0] : [-14, 2, 0])
+      : compact
+        ? (stop ? [0, 5.6, 2.8] : [0, 4.6, 0])
+        : stop ? [2.7, 10.4, 3.4] : [0, 9.2, 2];
     const k = phase === 'diving' ? 3 : 2;
     camera.position.x = THREE.MathUtils.damp(camera.position.x, cam[0], k, dt);
     camera.position.y = THREE.MathUtils.damp(camera.position.y, cam[1], k, dt);
@@ -805,7 +822,7 @@ export default function Scene({ phase, stop, onStop, data, compact }) {
     const lk = lookAt.current;
     lk.x = THREE.MathUtils.damp(lk.x, look[0], k, dt); lk.y = THREE.MathUtils.damp(lk.y, look[1], k, dt); lk.z = THREE.MathUtils.damp(lk.z, look[2], k, dt);
     camera.lookAt(lk);
-    camera.fov = THREE.MathUtils.damp(camera.fov, phase === 'diving' ? 70 : landing ? (compact ? 46 : 32) : compact ? 50 : stop ? 40 : 42, 4, dt);
+    camera.fov = THREE.MathUtils.damp(camera.fov, phase === 'diving' ? 70 : landing ? (compact ? 46 : 32) : compact ? (stop ? 50 : 50) : stop ? 43 : 42, 4, dt);
     camera.updateProjectionMatrix();
 
     const w = walk.current, c = ctl.current;
@@ -939,7 +956,7 @@ export default function Scene({ phase, stop, onStop, data, compact }) {
             </group>
           );
         })}
-        <group ref={kamil} scale={phase === 'landing' ? 1.7 : 0.9}>
+        <group ref={kamil} scale={phase === 'landing' ? 0.85 : 0.45}>
           <Kamil ctl={ctl} point={phase === 'planet' && !!stop} excited={phase === 'landing' || hover != null} mood={stop === 'post' ? 'wink' : 'happy'} />
         </group>
       </group>
