@@ -104,6 +104,15 @@ function CountUp({ value }) {
 }
 CountUp.propTypes = { value: PropTypes.string.isRequired };
 
+const getLowResThumb = (url) => {
+  if (!url || typeof url !== 'string') return url;
+  if (url.startsWith('/assets/')) {
+    const thumbUrl = url.replace('/assets/', '/assets-thumb/').replace(/\.(png|jpeg|jpg)$/i, '.jpg');
+    return thumbUrl;
+  }
+  return url;
+};
+
 function ProjectCard({ p, i, onHover, onOpenViewer }) {
   const ref = useRef(null);
   const struck = useInView(ref, STRIKE_OPTS);
@@ -138,7 +147,8 @@ function ProjectCard({ p, i, onHover, onOpenViewer }) {
     onHover(null);
   };
 
-  const currentShot = images[activeShotIdx] || p.image || images[0];
+  const fullShot = images[activeShotIdx] || p.image || images[0];
+  const currentShot = getLowResThumb(fullShot);
   const shotCount = images.length || 1;
 
   return (
@@ -153,10 +163,22 @@ function ProjectCard({ p, i, onHover, onOpenViewer }) {
       onFocus={() => onHover(p)}
       onBlur={() => onHover(null)}
     >
-      {/* Cover Image Stage with Auto-Slide */}
+      {/* Cover Image Stage with Auto-Slide (Low-res preview by default, click for full-res viewer) */}
       {currentShot ? (
         <div className="card-img-stage" onClick={() => onOpenViewer(p, activeShotIdx)}>
-          <img src={currentShot} alt={p.name} loading="lazy" key={currentShot} className="card-slide-img" />
+          <img
+            src={currentShot}
+            alt={p.name}
+            loading="lazy"
+            key={currentShot}
+            className="card-slide-img"
+            onError={(e) => {
+              // Graceful fallback to full resolution if thumbnail is not found
+              if (fullShot && e.target.src !== fullShot) {
+                e.target.src = fullShot;
+              }
+            }}
+          />
           <div className="card-img-overlay" />
           <span className="card-img-badge-left">{p.category || 'Computer Vision'}</span>
           <span className="card-img-badge-right">
@@ -328,7 +350,7 @@ function ProjectViewerModal({ project, index, onClose, onPrev, onNext, onJump })
           )}
         </div>
 
-        {/* Thumbnails */}
+        {/* Thumbnails (load fast compressed thumbs) */}
         {images.length > 1 && (
           <div className="pmodal-thumbs">
             {images.map((src, i) => (
@@ -337,7 +359,7 @@ function ProjectViewerModal({ project, index, onClose, onPrev, onNext, onJump })
                 className={`pmodal-thumb${i === index ? ' active' : ''}`}
                 onClick={() => onJump(i)}
               >
-                <img src={src} alt={`Thumbnail ${i + 1}`} />
+                <img src={getLowResThumb(src)} alt={`Thumbnail ${i + 1}`} loading="lazy" />
               </div>
             ))}
           </div>
