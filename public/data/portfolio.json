@@ -468,6 +468,46 @@
       "year": "2024",
       "zahid": "Monitors network traffic streams to detect and mitigate botnet DDoS threats.",
       "zahidMood": "wow"
+    },
+    {
+      "id": 8,
+      "name": "Airloop Telemetry & Road Infrastructure Platform",
+      "title": "Airloop Telemetry & Road Infrastructure Platform",
+      "problem": "Manual pavement condition inspection across large transportation networks is time-intensive, subjective, and delays critical rehabilitation planning.",
+      "fix": "Enterprise geospatial GIS platform synchronizing HD video telemetry, GPS coordinates, and AI distress detections across 16,600+ road segments to automate ASTM D6433 PCI scoring and PKR 179B+ M&R budget forecasting.",
+      "proof": "Leaflet GIS · ASTM D6433 · Synced Telemetry",
+      "repo": "https://github.com/zahid-marwat/airloop-telemetry-dashboard",
+      "githubUrl": "https://github.com/zahid-marwat/airloop-telemetry-dashboard",
+      "live": "",
+      "image": "/assets/dashboard_project/01_landing_page.png",
+      "images": [
+        "/assets/dashboard_project/01_landing_page.png",
+        "/assets/dashboard_project/02_telemetry_gis_network.png",
+        "/assets/dashboard_project/03_defect_inspection_video_telemetry.png",
+        "/assets/dashboard_project/04_pci_condition_analytics.png",
+        "/assets/dashboard_project/05_admin_management_portal.png"
+      ],
+      "tags": [
+        "Python",
+        "Flask",
+        "Leaflet.js",
+        "SQLite",
+        "Chart.js",
+        "ASTM D6433",
+        "Docker",
+        "HMAC-SHA256"
+      ],
+      "longDescription": "An enterprise-grade geospatial road asset management and automated pavement inspection platform. Indexes 1,260+ roads and 16,616 segments across 21 districts, analyzing 628,000+ AI-detected pavement distresses with synchronized HD video telemetry and automated ASTM D6433 Pavement Condition Index (PCI) budget forecasting.",
+      "features": [
+        "Dual-mode interactive Leaflet GIS with 7-tier ASTM D6433 PCI rating and deep links",
+        "Frame-synchronized HD inspection video playback with HMAC-signed tokenized streaming",
+        "Automated PCI deduction curves and M&R budget forecasting (PKR 179.85B calculated)",
+        "Role-based access control (RBAC), bcrypt auth, and audit telemetry logging"
+      ],
+      "category": "Computer Vision",
+      "year": "2025",
+      "zahid": "Transforms 628K+ computer vision detections into spatial ASTM PCI analytics and maintenance planning.",
+      "zahidMood": "proud"
     }
   ],
   "problems": [
@@ -733,6 +773,46 @@
       "year": "2024",
       "zahid": "Monitors network traffic streams to detect and mitigate botnet DDoS threats.",
       "zahidMood": "wow"
+    },
+    {
+      "id": 8,
+      "name": "Airloop Telemetry & Road Infrastructure Platform",
+      "title": "Airloop Telemetry & Road Infrastructure Platform",
+      "problem": "Manual pavement condition inspection across large transportation networks is time-intensive, subjective, and delays critical rehabilitation planning.",
+      "fix": "Enterprise geospatial GIS platform synchronizing HD video telemetry, GPS coordinates, and AI distress detections across 16,600+ road segments to automate ASTM D6433 PCI scoring and PKR 179B+ M&R budget forecasting.",
+      "proof": "Leaflet GIS · ASTM D6433 · Synced Telemetry",
+      "repo": "https://github.com/zahid-marwat/airloop-telemetry-dashboard",
+      "githubUrl": "https://github.com/zahid-marwat/airloop-telemetry-dashboard",
+      "live": "",
+      "image": "/assets/dashboard_project/01_landing_page.png",
+      "images": [
+        "/assets/dashboard_project/01_landing_page.png",
+        "/assets/dashboard_project/02_telemetry_gis_network.png",
+        "/assets/dashboard_project/03_defect_inspection_video_telemetry.png",
+        "/assets/dashboard_project/04_pci_condition_analytics.png",
+        "/assets/dashboard_project/05_admin_management_portal.png"
+      ],
+      "tags": [
+        "Python",
+        "Flask",
+        "Leaflet.js",
+        "SQLite",
+        "Chart.js",
+        "ASTM D6433",
+        "Docker",
+        "HMAC-SHA256"
+      ],
+      "longDescription": "An enterprise-grade geospatial road asset management and automated pavement inspection platform. Indexes 1,260+ roads and 16,616 segments across 21 districts, analyzing 628,000+ AI-detected pavement distresses with synchronized HD video telemetry and automated ASTM D6433 Pavement Condition Index (PCI) budget forecasting.",
+      "features": [
+        "Dual-mode interactive Leaflet GIS with 7-tier ASTM D6433 PCI rating and deep links",
+        "Frame-synchronized HD inspection video playback with HMAC-signed tokenized streaming",
+        "Automated PCI deduction curves and M&R budget forecasting (PKR 179.85B calculated)",
+        "Role-based access control (RBAC), bcrypt auth, and audit telemetry logging"
+      ],
+      "category": "Computer Vision",
+      "year": "2025",
+      "zahid": "Transforms 628K+ computer vision detections into spatial ASTM PCI analytics and maintenance planning.",
+      "zahidMood": "proud"
     }
   ],
   "hunting": [

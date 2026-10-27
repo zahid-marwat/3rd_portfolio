@@ -7,7 +7,7 @@ $codec = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Obj
 $encoderParams = New-Object System.Drawing.Imaging.EncoderParameters(1)
 $encoderParams.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter([System.Drawing.Imaging.Encoder]::Quality, [long]72)
 
-$projectDirs = @('smart-annotator', 'cracks-project', 'road-assets-aci', 'traffice-monitoring-project', 'face-detection-project', 'botnet-detection', 'malware-detection')
+$projectDirs = @('dashboard_project', 'smart-annotator', 'cracks-project', 'road-assets-aci', 'traffice-monitoring-project', 'face-detection-project', 'botnet-detection', 'malware-detection')
 
 foreach ($dir in $projectDirs) {
     $srcDir = Join-Path $srcBase $dir
@@ -15,7 +15,7 @@ foreach ($dir in $projectDirs) {
     if (-not (Test-Path $srcDir)) { continue }
     if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Force -Path $destDir | Out-Null }
 
-    Get-ChildItem -Path $srcDir -File | Where-Object { $_.Extension -match '\.(png|jpg|jpeg|webp)$' } | ForEach-Object {
+    Get-ChildItem -Path $srcDir -File | Where-Object { $_.Extension -match '\.(png|jpg|jpeg)$' } | ForEach-Object {
         $img = [System.Drawing.Image]::FromFile($_.FullName)
         $maxDim = 640
         $w = $img.Width
